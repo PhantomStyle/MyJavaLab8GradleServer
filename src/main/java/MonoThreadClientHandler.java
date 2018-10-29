@@ -68,15 +68,11 @@ public class MonoThreadClientHandler implements Runnable {
                 }
             }
 
-            System.out.println("Client disconnected");
-            System.out.println("Closing connections & channels.");
-
             in.close();
             out.close();
 
             clientDialog.close();
 
-            System.out.println("Closing connections & channels - DONE.");
         } catch (IOException e) {
             e.printStackTrace();
         }
